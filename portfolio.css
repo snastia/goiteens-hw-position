@@ -4,6 +4,8 @@
     --secondary-text-color: #757575;
     --thirdly-text-color: #FFFFFF;
     --background-color: #2F303A;
+    --svg: rgba(175, 177, 184, 1);
+    --card-border-line: #EEEEEE;
 }
 /* #2196F3 -accent-color
 #212121 -primary-text-color
@@ -142,42 +144,68 @@ margin-left: auto;
     margin: -15px;
 }
 /* оверлей */
+
 .thumb{
     position: relative;
     overflow: hidden;
 }
 .overlay{
-    background: rgba(33, 150, 243, 0.9);
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    padding: 63px 24px;
+    /* Альтернатива */
+    /* bottom: 0; */
+    /* right: 0; */
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;   
+    
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay-text{
-    font-size: 18px;
-line-height: 28px;
-
-letter-spacing: 0.03em;
-
-color: #FFFFFF;
-}
-.examples-link{
-    height: 294px;
-width: 370px;
-}
 .link:hover .overlay,
 .link:focus .overlay{
     transform: translateY(0);
 }
-.examples-link-img{
-    width: calc((100% - 30px * 3) / 3);
-    margin: 15px;
+
+.link:hover .link-text,
+.link:focus .link-text{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.overlay-text{
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+
+    color: var(--thirdly-text-color);
+}
+
+.examples-titel {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  
+  .examples-type {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+  }
+  
+  .link-text {
+    padding: 20px 24px;
+    border-left: 1px solid var(--card-border-line);
+    border-right: 1px solid var(--card-border-line);
+    border-bottom: 1px solid var(--card-border-line);
+  }
+  /* портфоліо */
 .button{
     border: none;
     border-radius: 4px;
