@@ -112,8 +112,23 @@ margin-left: auto;
     color: var(--secondary-text-color);
 }
 /* Модальне вікно і бекдроп */
+.button-close{
+border: none;
+background-color: #fff;
+border-radius: 50%;
+position: absolute;
+}
+.close{
+    height: 11px;
+width: 11px;
+left: 4px;
+top: 3px;
+
+}
+
 
 .backdrop{
+    z-index: 4;
     position: fixed;
     top: 0;
     left: 0;
@@ -207,6 +222,24 @@ color: var(--thirdly-text-color);
     background-color: aquamarine;
     color: #2F303A;
 
+}
+.thumbwork{
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--thirdly-text-color);
+    width: 100%;
+    height: 23%;
+    bottom: 0;
+    padding: 27px;
+}
+.thumb-place{
+position: relative;
+}
+.work-text{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 /* секція особливості */
 .fetures{
